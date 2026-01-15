@@ -1,5 +1,5 @@
 # Data Visualization Project: The Pressure Game
-### Beyond EXpected Goals: the hidden side of Serie A
+### Beyond Expected Goals: the hidden side of Serie A
 
 ---
 
