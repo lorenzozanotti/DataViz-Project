@@ -1,30 +1,51 @@
-# The Pressure Game: Beyond Expected Goals
-### Data Visualization Project - Serie A Analysis
-
-**Author:** Lorenzo Zanotti (ID: 902652)  
-**University:** University of Milano-Bicocca (UniMiB)  
-**Academic Year:** 2025/2026
+# Data Visualization Project: The Pressure Game
+### Tactical Identity & Efficiency in Serie A Football
 
 ---
 
-## 📌 Project Overview
-This repository contains the data and code for the project **"The Pressure Game"**, which analyzes tactical identity and efficiency in Serie A (2024/25 season). The analysis focuses on:
-1.  **Tactical Identity:** Clustering teams based on offensive output and defensive approach (PCA).
-2.  **Efficiency Analysis:** Measuring the gap between expected points (xPTS) and actual results.
-3.  **Case Study:** AC Milan's tactical evolution from "Chaos" (24/25) to "Solidity" (25/26).
+## 📌 Description
 
-## 📂 Repository Structure
-- `data/`: Contains the processed datasets from Understat.
-- `notebooks/`: Jupyter Notebooks with the analysis and visualization code.
-- `visualizations/`: Generated charts used in the presentation.
+This project was developed as part of the **Data Visualization course** within the **MSc in Data Science program** at **University of Milano-Bicocca**. It focuses on a statistical analysis of the **Serie A (2024/25 season)**, utilizing advanced football metrics from **Understat**.
 
-## 🛠️ Tools Used
-- **Language:** Python 3.9+
-- **Data Processing:** Pandas, NumPy
-- **Analysis:** Scikit-learn (PCA, K-Means, Normalization)
-- **Visualization:** Matplotlib, Seaborn
+The analysis moves beyond traditional league tables to quantify **Tactical Identity** and **Efficiency**. By applying data visualization techniques and machine learning, the project identifies distinct playing styles, measures the gap between expected and actual performance, and visualizes the structural trade-offs between offensive volume and defensive solidity.
 
-## 🚀 How to Run
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/[TUO-USERNAME]/the-pressure-game.git
+---
+
+## 📊 Key Analysis Areas
+
+### 1. Tactical Profiling (PCA & Clustering)
+Using **Principal Component Analysis (PCA)**, the project reduces complex tactical metrics (xG, xGA, PPDA, Deep Completions) into two primary dimensions. This allows for the unsupervised classification of teams into four distinct archetypes:
+*   *Elite Volume Generators*
+*   *Pragmatic Controllers*
+*   *Passive Defenders*
+*   *Strugglers*
+
+### 2. Efficiency & Reality Checks
+A deep dive into the disparity between performance and results:
+*   **Performance Matrix:** Visualizing the trade-off between offensive production and defensive vulnerability.
+*   **Reality vs. Expectation:** Measuring overperformance and underperformance by comparing Actual Points against Expected Points (xPTS).
+
+### 3. Case Study: The AC Milan Pivot
+A temporal analysis of AC Milan’s tactical shift from the 24/25 to the 25/26 season. Radar charts and percentage-change analysis visualize how the team sacrificed offensive volume to achieve structural solidity and higher efficiency.
+
+---
+
+## ⚙️ Technical Workflow
+
+The project follows a reproducible data pipeline:
+
+1.  **Data Ingestion:** Parsing raw exports from Understat.
+2.  **Preprocessing:** Normalization of metrics to "Per 90 Minutes" values to ensure fair comparison.
+3.  **Feature Engineering:** Calculation of custom KPIs such as the *Efficiency Gap* and *Territorial Dominance Index*.
+4.  **Visualization:** Generation of high-fidelity, static charts using a custom-built style theme inspired by data journalism (e.g., *The Economist*).
+
+---
+
+## 💻 Tech Stack
+
+*   **Python 3.x**
+*   **Data Processing:** Pandas, NumPy
+*   **Machine Learning:** Scikit-learn (StandardScaler, PCA, K-Means)
+*   **Visualization:** Matplotlib, Seaborn
+*   **Data Source:** Understat
+
