@@ -27,7 +27,7 @@ The project challenges conventional narratives by proving that **volume alone is
 The following analytical and visualization techniques were employed:
 
 -   **Data Processing:** Extraction of metrics from Understat and normalization to "Per 90 Minutes" values for fair comparison.
--   **Dimensionality Reduction (PCA):** Reducing 4 tactical variables (xG, DC, xGA, PPDA) into 2 interpretable dimensions (Offensive Output vs Defensive Approach).
+-   **Dimensionality Reduction (PCA):** Reducing 6 tactical variables (xG, DC, ODC, xGA, PPDA, xPTS) into 2 interpretable dimensions (Offensive Output vs Defensive Approach).
 -   **Unsupervised Clustering (K-Means):** Segmentation of teams into 4 tactical clusters (e.g., *Elite Volume Generators*, *Pragmatic Controllers*, *Passive Defenders*).
 -   **Comparative Visual Analytics:** Use of scatter plots, heatmaps, and territorial control maps to visualize multi-dimensional performance.
 -   **Temporal Analysis:** Season-over-season comparison using radar charts and percentage change bar plots.
