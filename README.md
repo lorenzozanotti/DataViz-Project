@@ -1,51 +1,44 @@
 # Data Visualization Project: The Pressure Game
-### Tactical Identity & Efficiency in Serie A Football
+### Beyond EXpected Goals: the hidden side of Serie A
 
 ---
 
 ## 📌 Description
 
-This project was developed as part of the **Data Visualization course** within the **MSc in Data Science program** at **University of Milano-Bicocca**. It focuses on a statistical analysis of the **Serie A (2024/25 season)**, utilizing advanced football metrics from **Understat**.
+This project was developed as part of the **Data Visualization course** within the **MSc in Data Science program** at **University of Milano-Bicocca**. It presents a comprehensive statistical and tactical analysis of the **Italian Serie A (2024/25 season)**, utilizing advanced football metrics from **Understat**.
 
-The analysis moves beyond traditional league tables to quantify **Tactical Identity** and **Efficiency**. By applying data visualization techniques and machine learning, the project identifies distinct playing styles, measures the gap between expected and actual performance, and visualizes the structural trade-offs between offensive volume and defensive solidity.
+The analysis moves beyond traditional league tables to explore the **structural drivers** of team performance, quantifying the relationship between **Expected Metrics** (xG, xPTS), **Tactical Identity** (pressing intensity, territorial control), and **Actual Results** (goals, points).
 
----
-
-## 📊 Key Analysis Areas
-
-### 1. Tactical Profiling (PCA & Clustering)
-Using **Principal Component Analysis (PCA)**, the project reduces complex tactical metrics (xG, xGA, PPDA, Deep Completions) into two primary dimensions. This allows for the unsupervised classification of teams into four distinct archetypes:
-*   *Elite Volume Generators*
-*   *Pragmatic Controllers*
-*   *Passive Defenders*
-*   *Strugglers*
-
-### 2. Efficiency & Reality Checks
-A deep dive into the disparity between performance and results:
-*   **Performance Matrix:** Visualizing the trade-off between offensive production and defensive vulnerability.
-*   **Reality vs. Expectation:** Measuring overperformance and underperformance by comparing Actual Points against Expected Points (xPTS).
-
-### 3. Case Study: The AC Milan Pivot
-A temporal analysis of AC Milan’s tactical shift from the 24/25 to the 25/26 season. Radar charts and percentage-change analysis visualize how the team sacrificed offensive volume to achieve structural solidity and higher efficiency.
+The project challenges conventional narratives by proving that **volume alone is vanity**: creating chances without converting them leads to underperformance. Through machine learning (PCA, K-Means clustering) and custom visualizations, the analysis identifies **four tactical archetypes** and presents a detailed case study of **AC Milan's structural transformation** from a high-risk approach (24/25) to a safety-first, efficient model (25/26).
 
 ---
 
-## ⚙️ Technical Workflow
+## 🎯 Project Objectives
 
-The project follows a reproducible data pipeline:
-
-1.  **Data Ingestion:** Parsing raw exports from Understat.
-2.  **Preprocessing:** Normalization of metrics to "Per 90 Minutes" values to ensure fair comparison.
-3.  **Feature Engineering:** Calculation of custom KPIs such as the *Efficiency Gap* and *Territorial Dominance Index*.
-4.  **Visualization:** Generation of high-fidelity, static charts using a custom-built style theme inspired by data journalism (e.g., *The Economist*).
+1.  **Map Tactical Identity:** Classify Serie A teams into distinct playing styles based on offensive output and defensive approach using **PCA** and **Clustering**.
+2.  **Quantify Efficiency:** Measure the disparity between Expected Performance (xG, xPTS) and Actual Results to identify overperformers.
+3.  **Identify Structural Patterns:** Reveal hidden correlations between pressing intensity (PPDA), territorial dominance, and goal creation.
+4.  **Case Study Analysis:** Visualize AC Milan's tactical pivot across two seasons, highlighting the trade-offs between volume and solidity.
 
 ---
 
-## 💻 Tech Stack
+## 🔬 Methodologies Used
 
-*   **Python 3.x**
-*   **Data Processing:** Pandas, NumPy
-*   **Machine Learning:** Scikit-learn (StandardScaler, PCA, K-Means)
-*   **Visualization:** Matplotlib, Seaborn
-*   **Data Source:** Understat
+The following analytical and visualization techniques were employed:
 
+-   **Data Processing:** Extraction of metrics from Understat and normalization to "Per 90 Minutes" values for fair comparison.
+-   **Dimensionality Reduction (PCA):** Reducing 4 tactical variables (xG, DC, xGA, PPDA) into 2 interpretable dimensions (Offensive Output vs Defensive Approach).
+-   **Unsupervised Clustering (K-Means):** Segmentation of teams into 4 tactical clusters (e.g., *Elite Volume Generators*, *Pragmatic Controllers*, *Passive Defenders*).
+-   **Comparative Visual Analytics:** Use of scatter plots, heatmaps, and territorial control maps to visualize multi-dimensional performance.
+-   **Temporal Analysis:** Season-over-season comparison using radar charts and percentage change bar plots.
+
+---
+
+## 🛠️ Technologies Used
+
+-   **Programming Language:** Python 3.11+
+-   **Data Manipulation:** Pandas, NumPy.
+-   **Machine Learning:** Scikit-learn (StandardScaler, PCA, K-Means).
+-   **Visualization:** Matplotlib, Seaborn (Static, publication-quality charts with custom journalistic styling).
+-   **Logo Integration:** Custom `LogoManager` class for dynamic team logo placement.
+-   **Data Source:** [Understat.com](https://understat.com/) (Advanced football statistics).
